@@ -18,13 +18,12 @@ for iter = 1:num_iters
     %
 
 
-
-
-
-
-
-
-
+    hypothesis = X * theta;
+    error = (hypothesis - y);
+    delta = sum(error.*X);
+    for feature = 1:size(X,2)
+        theta(feature) = theta(feature) - alpha * 1/m * delta(feature);
+    end
 
 
     % ============================================================
