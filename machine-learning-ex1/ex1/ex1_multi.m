@@ -155,6 +155,8 @@ fprintf('\n');
 % ====================== YOUR CODE HERE ======================
 price = 0; % You should change this
 
+house_data = [1 1650 3];
+price = house_data * theta;
 
 % ============================================================
 
