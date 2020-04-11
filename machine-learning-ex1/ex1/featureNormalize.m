@@ -26,12 +26,19 @@ sigma = zeros(1, size(X, 2));
 % Hint: You might find the 'mean' and 'std' functions useful.
 %       
 
+size_data = X(:,1);
+mean_size = mean(size_data);
+std_size = std(size_data);
+X_size = (size_data - mean_size)/std_size;
 
+bedroom_data = X(:,2);
+mean_bedroom = mean(bedroom_data);
+std_bedroom = std(bedroom_data);
+X_bedroom = (bedroom_data - mean_bedroom)/std_bedroom;
 
-
-
-
-
+mu = [mean_size mean_bedroom];
+sigma = [std_size std_bedroom];
+X_norm = [X_size X_bedroom];
 
 
 % ============================================================
