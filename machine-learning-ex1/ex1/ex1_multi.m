@@ -106,6 +106,10 @@ fprintf('\n');
 % not need to be normalized.
 price = 0; % You should change this
 
+house_data = [1 1650 3];
+house_data(1,2) = (house_data(1,2) - mu(1,1))/(sigma(1,1));
+house_data(1,3) = (house_data(1,3) - mu(1,2))/(sigma(1,2));
+price = house_data * theta;
 
 % ============================================================
 
