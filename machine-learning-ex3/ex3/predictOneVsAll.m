@@ -31,7 +31,7 @@ X = [ones(m, 1) X];
 %       
 
 
-[probability indices] = max(sigmoid(all_theta * X'))
+[probability indices] = max(sigmoid(all_theta * X'));
 p = indices';
 
 
